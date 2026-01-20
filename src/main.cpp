@@ -29,7 +29,7 @@ void connectMQTT();
 void sendToMQTT();
 void messageHandler(String &topic, String &payload);
 
-void setup() {
+void setup() { 
   Serial.begin(115200);
   connectWiFi();
   connectMQTT();
