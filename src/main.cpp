@@ -8,8 +8,8 @@ const char WIFI_SSID[] = "Airtel_3031";
 const char WIFI_PASSWORD[] = "123456789000";
 
 // --- Configuration MQTT ---
-const char MQTT_BROKER_ADDRESS[] = "test.mosquitto.org";
-const int MQTT_PORT = 1883;
+const char MQTT_BROKER_ADDRESS[] = "broker.freemqtt.com";
+const int MQTT_PORT = 8084;
 const char MQTT_CLIENT_ID[] = "esp8266-station-001";  
 
 // --- Topics organisés ---
