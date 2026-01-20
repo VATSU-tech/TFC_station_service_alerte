@@ -12,18 +12,18 @@
 #include <ArduinoJson.h>
 #include <MQTTClient.h>
 
-const char WIFI_SSID[] = "YOUR_WIFI_SSID";     // CHANGE TO YOUR WIFI SSID
-const char WIFI_PASSWORD[] = "YOUR_WIFI_PASSWORD";  // CHANGE TO YOUR WIFI PASSWORD
+const char WIFI_SSID[] = "Airtel_3031";     // CHANGE TO YOUR WIFI SSID
+const char WIFI_PASSWORD[] = "123456789000";  // CHANGE TO YOUR WIFI PASSWORD
 
 const char MQTT_BROKER_ADRRESS[] = "test.mosquitto.org";  // CHANGE TO MQTT BROKER'S ADDRESS
 const int MQTT_PORT = 1883;
-const char MQTT_CLIENT_ID[] = "YOUR-NAME-esp8266-001";  // CHANGE IT AS YOU DESIRE
+const char MQTT_CLIENT_ID[] = "vatsu_nodemcu";  // CHANGE IT AS YOU DESIRE
 const char MQTT_USERNAME[] = "";                        // CHANGE IT IF REQUIRED, empty if not required
 const char MQTT_PASSWORD[] = "";                        // CHANGE IT IF REQUIRED, empty if not required
 
 // The MQTT topics that ESP8266 should publish/subscribe
-const char PUBLISH_TOPIC[] = "YOUR-NAME-esp8266-001/loopback";    // CHANGE IT AS YOU DESIRE
-const char SUBSCRIBE_TOPIC[] = "YOUR-NAME-esp8266-001/loopback";  // CHANGE IT AS YOU DESIRE
+const char PUBLISH_TOPIC[] = "vatsu_nodemcu/loopback";    // CHANGE IT AS YOU DESIRE
+const char SUBSCRIBE_TOPIC[] = "vatsu_nodemcu/loopback";  // CHANGE IT AS YOU DESIRE
 
 const int PUBLISH_INTERVAL = 5000;  // 5 seconds
 
