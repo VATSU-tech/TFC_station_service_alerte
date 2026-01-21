@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <ArduinoOTA.h>
 #include <ESP8266WiFi.h>
 #include <ArduinoJson.h>
 #include <MQTTClient.h>
@@ -31,11 +32,15 @@ void messageHandler(String &topic, String &payload);
 
 void setup() { 
   Serial.begin(115200);
+  ArduinoOTA.begin();
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, HIGH); // LED OFF
   connectWiFi();
   connectMQTT();
 }
 
 void loop() {
+  ArduinoOTA.handle();
   // Maintenir la connexion MQTT
   mqtt.loop();
 
