@@ -3,3 +3,10 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+server/node_modules
+server/dist
+server/.env
+client/node_modules
+client/build
+client/.env
+.DS_Store
