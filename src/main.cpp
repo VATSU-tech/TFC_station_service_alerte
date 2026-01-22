@@ -1,112 +1,79 @@
-#include <Arduino.h>
-#include <ArduinoOTA.h>
 #include <ESP8266WiFi.h>
+#include <WebSocketsClient.h>
 #include <ArduinoJson.h>
-#include <MQTTClient.h>
 
-// --- Configuration Wi-Fi ---
-const char WIFI_SSID[] = "Airtel_3031";
-const char WIFI_PASSWORD[] = "123456789000";
+// === À MODIFIER POUR CHAQUE STATION ===
+#define STATION_ID "STATION_A"
 
-// --- Configuration MQTT ---
-const char MQTT_BROKER_ADDRESS[] = "broker.freemqtt.com";
-const int MQTT_PORT = 8084;
-const char MQTT_CLIENT_ID[] = "esp8266-station-001";  
+// WiFi
+const char* ssid = "Airtel_3031";
+const char* password = "12345678900";
 
-// --- Topics organisés ---
-const char TOPIC_PUBLISH[]   = "station/temp";
-const char TOPIC_SUBSCRIBE[] = "station/cmd";
+// Serveur
+const char* ws_host = "192.168.0.200";
+const uint16_t ws_port = 8080;
 
-const int PUBLISH_INTERVAL = 5000;  // 5 secondes
+WebSocketsClient webSocket;
 
-WiFiClient network;
-MQTTClient mqtt(256);
+void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
 
-unsigned long lastPublishTime = 0;
+  if (type == WStype_CONNECTED) {
+    Serial.println("Connecté au serveur");
 
-// --- Prototypes ---
-void connectWiFi();
-void connectMQTT();
-void sendToMQTT();
-void messageHandler(String &topic, String &payload);
+    StaticJsonDocument<200> doc;
+    doc["type"] = "REGISTER";
+    doc["stationId"] = STATION_ID;
 
-void setup() { 
+    String msg;
+    serializeJson(doc, msg);
+    webSocket.sendTXT(msg);
+  }
+
+  if (type == WStype_TEXT) {
+    StaticJsonDocument<256> doc;
+    deserializeJson(doc, payload);
+
+    if (doc["type"] == "REMOTE_ALERT") {
+      Serial.println("ALERTE DISTANTE RECUE");
+      Serial.println(doc["source"].as<String>());
+
+      // ICI → mesures préventives
+      // stopPompes();
+      // allumerGyro();
+    }
+  }
+}
+
+void setup() {
   Serial.begin(115200);
-  ArduinoOTA.begin();
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, HIGH); // LED OFF
-  connectWiFi();
-  connectMQTT();
+
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+  }
+
+  webSocket.begin(ws_host, ws_port, "/");
+  webSocket.onEvent(webSocketEvent);
 }
 
 void loop() {
-  ArduinoOTA.handle();
-  // Maintenir la connexion MQTT
-  mqtt.loop();
+  webSocket.loop();
 
-  // Vérifier la connexion Wi-Fi et MQTT
-  if (WiFi.status() != WL_CONNECTED) connectWiFi();
-  if (!mqtt.connected()) connectMQTT();
-
-  // Publier périodiquement
-  if (millis() - lastPublishTime > PUBLISH_INTERVAL) {
-    sendToMQTT();
-    lastPublishTime = millis();
+  // SIMULATION D’UN DANGER
+  if (digitalRead(D5) == HIGH) {
+    envoyerAlerte("GAS_LEAK", "CRITICAL");
+    delay(5000);
   }
 }
 
-// --- Connexion Wi-Fi ---
-void connectWiFi() {
-  Serial.print("Connexion au Wi-Fi: ");
-  Serial.println(WIFI_SSID);
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("\nWi-Fi connecté, IP: " + WiFi.localIP().toString());
-}
+void envoyerAlerte(const char* danger, const char* severity) {
+  StaticJsonDocument<256> doc;
+  doc["type"] = "ALERT";
+  doc["stationId"] = STATION_ID;
+  doc["danger"] = danger;
+  doc["severity"] = severity;
 
-// --- Connexion MQTT ---
-void connectMQTT() {
-  mqtt.begin(MQTT_BROKER_ADDRESS, MQTT_PORT, network);
-  mqtt.onMessage(messageHandler);
-
-  Serial.print("Connexion au broker MQTT...");
-  while (!mqtt.connect(MQTT_CLIENT_ID)) {
-    Serial.print(".");
-    delay(1000);
-  }
-  Serial.println("\nMQTT connecté !");
-
-  // S'abonner au topic de commandes
-  mqtt.subscribe(TOPIC_SUBSCRIBE);
-  Serial.println("Abonné au topic: " + String(TOPIC_SUBSCRIBE));
-}
-
-// --- Publication ---
-void sendToMQTT() {
-  JsonDocument message;
-  message["timestamp"] = millis();
-  message["temperature"] = analogRead(A0); // Exemple: lecture capteur
-
-  char buffer[256];
-  serializeJson(message, buffer);
-
-  mqtt.publish(TOPIC_PUBLISH, buffer);
-  Serial.println("Message publié sur " + String(TOPIC_PUBLISH) + ": " + buffer);
-}
-
-// --- Réception ---
-void messageHandler(String &topic, String &payload) {
-  Serial.println("Message reçu:");
-  Serial.println("Topic: " + topic);
-  Serial.println("Payload: " + payload);
-
-  // Exemple: si payload = "LED_ON", allumer une LED
-  if (payload == "LED_ON") {
-    digitalWrite(LED_BUILTIN, LOW); // LED ON
-  } else if (payload == "LED_OFF") {
-    digitalWrite(LED_BUILTIN, HIGH); // LED OFF
-  }
+  String msg;
+  serializeJson(doc, msg);
+  webSocket.sendTXT(msg);
 }
