@@ -11,7 +11,7 @@ const char* serverHost = "192.168.0.103";
 const int serverPort = 3000;
 
 // Identifiant unique de la station (changez pour chaque carte)
-String stationId = "Station_B";
+String stationId = "Station_A";
 
 // Pin pour la LED d'alerte
 #define LED_PIN 2
