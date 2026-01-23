@@ -6,7 +6,7 @@ const PORT = 3000;
 
 // Serveur HTTP
 const server = app.listen(PORT, () => {
-  console.log(`✅ Serveur HTTP lancé sur http://localhost:${PORT}`);
+  console.log(`Serveur HTTP lancé sur http://localhost:${PORT}`);
 });
 
 // Serveur WebSocket
@@ -17,7 +17,7 @@ let connectedStations = new Map();
 
 wss.on('connection', (ws, req) => {
   const clientIP = req.socket.remoteAddress;
-  console.log(`📡 Nouvelle connexion WebSocket depuis ${clientIP}`);
+  console.log(`Nouvelle connexion WebSocket depuis ${clientIP}`);
 
   // Quand un message arrive
   ws.on('message', (message) => {
@@ -28,7 +28,7 @@ wss.on('connection', (ws, req) => {
       if (data.type === "register") {
         const stationId = data.stationId;
         connectedStations.set(ws, { stationId, ip: clientIP });
-        console.log(`✅ Station enregistrée: ${stationId} (IP: ${clientIP})`);
+        console.log(`Station enregistrée: ${stationId} (IP: ${clientIP})`);
 
         // Confirmer l'enregistrement à la station
         ws.send(JSON.stringify({ type: "registered", stationId }));
@@ -38,11 +38,11 @@ wss.on('connection', (ws, req) => {
       else if (data.type === "alert") {
         const stationInfo = connectedStations.get(ws);
         if (!stationInfo) {
-          console.log(`🚨 Alerte d'une station inconnue (IP: ${clientIP}): ${data.alert}`);
+          console.log(`Alerte d'une station inconnue (IP: ${clientIP}): ${data.alert}`);
           return;
         }
         const { stationId } = stationInfo;
-        console.log(`🚨 Alerte de ${stationId}: ${data.alert}`);
+        console.log(`Alerte de ${stationId}: ${data.alert}`);
 
         // Diffuser l'alerte à toutes les autres stations connectées
         wss.clients.forEach(client => {
@@ -56,7 +56,7 @@ wss.on('connection', (ws, req) => {
         });
       }
     } catch (err) {
-      console.error(`❌ Erreur de parsing du message depuis ${clientIP}:`, err);
+      console.error(`Erreur de parsing du message depuis ${clientIP}:`, err);
     }
   });
 
@@ -65,16 +65,16 @@ wss.on('connection', (ws, req) => {
     const stationInfo = connectedStations.get(ws);
     if (stationInfo) {
       const { stationId, ip } = stationInfo;
-      console.log(`❌ Station déconnectée: ${stationId} (IP: ${ip})`);
+      console.log(`Station déconnectée: ${stationId} (IP: ${ip})`);
       connectedStations.delete(ws);
     } else {
-      console.log(`❌ Connexion inconnue fermée (IP: ${clientIP})`);
+      console.log(`Connexion inconnue fermée (IP: ${clientIP})`);
     }
   });
 
   // Gestion des erreurs
   ws.on('error', (err) => {
-    console.error(`❌ Erreur WebSocket depuis ${clientIP}:`, err);
+    console.error(`Erreur WebSocket depuis ${clientIP}:`, err);
   });
 });
 

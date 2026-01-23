@@ -23,11 +23,11 @@ bool isRegistered = false;
 void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
   switch (type) {
     case WStype_CONNECTED: {
-      Serial.println("✅ Connecté au serveur WebSocket");
+      Serial.println("Connecté au serveur WebSocket");
       // Enregistrer la station
       String registerMsg = "{\"type\":\"register\",\"stationId\":\"" + stationId + "\"}";
       webSocket.sendTXT(registerMsg);
-      Serial.println("📤 Enregistrement envoyé: " + registerMsg);
+      Serial.println("Enregistrement envoyé: " + registerMsg);
       break;
     }
 
@@ -38,15 +38,15 @@ void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
       temp[length] = '\0';
       String message = temp;
 
-      Serial.println("📩 Message reçu: " + message);
+      Serial.println("Message reçu: " + message);
 
       // Parser le message JSON
       if (message.indexOf("\"type\":\"registered\"") != -1) {
         isRegistered = true;
-        Serial.println("✅ Station enregistrée avec succès");
+        Serial.println("Station enregistrée avec succès");
       } else if (message.indexOf("\"type\":\"alert\"") != -1) {
         // Alerte reçue d'une autre station
-        Serial.println("🚨 Alerte reçue d'une autre station !");
+        Serial.println("Alerte reçue d'une autre station !");
         // Déclencher LED et buzzer
         digitalWrite(LED_PIN, false);
         digitalWrite(BUZZER_PIN, HIGH);
@@ -58,13 +58,13 @@ void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
     }
 
     case WStype_DISCONNECTED: {
-      Serial.println("❌ Déconnecté du serveur WebSocket");
+      Serial.println("Déconnecté du serveur WebSocket");
       isRegistered = false;
       break;
     }
 
     case WStype_ERROR: {
-      Serial.println("❌ Erreur WebSocket");
+      Serial.println("Erreur WebSocket");
       break;
     }
   }
@@ -84,7 +84,7 @@ void setup() {
     delay(500);
     Serial.print(".");
   }
-  Serial.println(" ✅ WiFi connecté ! IP: " + WiFi.localIP().toString());
+  Serial.println(" WiFi connecté ! IP: " + WiFi.localIP().toString());
 
   // Connexion WebSocket
   webSocket.begin(serverHost, serverPort, "/");
@@ -117,7 +117,7 @@ void loop() {
     if (millis() - lastSend > 15000) {
       String alert = "{\"type\":\"alert\",\"stationId\":\"" + stationId + "\",\"alert\":\"Gaz détecté\"}";
       webSocket.sendTXT(alert);
-      Serial.println("🚨 Alerte envoyée: " + alert);
+      Serial.println("Alerte envoyée: " + alert);
       lastSend = millis();
     }
   }
