@@ -82,3 +82,4 @@ wss.on('connection', (ws, req) => {
 app.get('/', (req, res) => {
   res.send('Serveur WebSocket pour stations d\'alerte actif');
 });
+ 

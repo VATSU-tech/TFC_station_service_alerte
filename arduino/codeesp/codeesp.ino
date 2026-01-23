@@ -11,7 +11,7 @@ const char* serverHost = "192.168.0.103";
 const int serverPort = 3000;
 
 // Identifiant unique de la station (changez pour chaque carte)
-String stationId = "Station_A";
+String stationId = "Station_B";
 
 // Pin pour la LED d'alerte
 #define LED_PIN 2
@@ -22,16 +22,22 @@ bool isRegistered = false;
 
 void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
   switch (type) {
-    case WStype_CONNECTED:
+    case WStype_CONNECTED: {
       Serial.println("✅ Connecté au serveur WebSocket");
       // Enregistrer la station
       String registerMsg = "{\"type\":\"register\",\"stationId\":\"" + stationId + "\"}";
       webSocket.sendTXT(registerMsg);
       Serial.println("📤 Enregistrement envoyé: " + registerMsg);
       break;
+    }
 
-    case WStype_TEXT:
-      String message = String((char*)payload, length);
+    case WStype_TEXT: {
+      // Créer une String sécurisée à partir du payload
+      char temp[length + 1];
+      memcpy(temp, payload, length);
+      temp[length] = '\0';
+      String message = temp;
+
       Serial.println("📩 Message reçu: " + message);
 
       // Parser le message JSON
@@ -42,22 +48,25 @@ void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
         // Alerte reçue d'une autre station
         Serial.println("🚨 Alerte reçue d'une autre station !");
         // Déclencher LED et buzzer
-        digitalWrite(LED_PIN, HIGH);
+        digitalWrite(LED_PIN, false);
         digitalWrite(BUZZER_PIN, HIGH);
         delay(2000);  // Durée de l'alerte
-        digitalWrite(LED_PIN, LOW);
+        digitalWrite(LED_PIN, true);
         digitalWrite(BUZZER_PIN, LOW);
       }
       break;
+    }
 
-    case WStype_DISCONNECTED:
+    case WStype_DISCONNECTED: {
       Serial.println("❌ Déconnecté du serveur WebSocket");
       isRegistered = false;
       break;
+    }
 
-    case WStype_ERROR:
+    case WStype_ERROR: {
       Serial.println("❌ Erreur WebSocket");
       break;
+    }
   }
 }
 
@@ -65,7 +74,7 @@ void setup() {
   Serial.begin(115200);
   pinMode(LED_PIN, OUTPUT);
   pinMode(BUZZER_PIN, OUTPUT);
-  digitalWrite(LED_PIN, LOW);
+  digitalWrite(LED_PIN, true);
   digitalWrite(BUZZER_PIN, LOW);
 
   // Connexion WiFi
