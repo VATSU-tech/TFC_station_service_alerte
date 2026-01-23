@@ -8,4 +8,6 @@ determine whether they are fit for use. Unit testing finds problems early
 in the development cycle.
 
 More information about PlatformIO Unit Testing:
-- https://docs.platformio.org/en/latest/advanced/unit-testing/index.html
+
+- <https://docs.platformio.org/en/latest/advanced/unit-testing/index.html>
+- maintenant je veut que tu me donne la version en ligne, pour le server, et arduino que je peut heberger et utiliser le systeme avec le meme principe mais en condition reel(a distance )IoT
