@@ -8,7 +8,7 @@ console.log('Serveur WebSocket démarré sur le port 8080');
 
 wss.on('connection', (ws) => {
 
-  console.log('Nouvelle connexion');
+  console.log('Nouvelle connexion',ws);
 
   ws.on('message', (message) => {
     try {
