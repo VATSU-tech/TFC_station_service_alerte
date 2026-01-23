@@ -1,10 +1,11 @@
 const express = require('express');
 const WebSocket = require('ws');
 
-const app = express();
-const PORT = 3000;
+const app = express(); // Création de l'application Express
+const PORT = 3000;  // Port d'écoute du serveur
 
 // Serveur HTTP
+
 const server = app.listen(PORT, () => {
   console.log(`Serveur HTTP lancé sur http://localhost:${PORT}`);
 });
@@ -27,7 +28,7 @@ wss.on('connection', (ws, req) => {
       // Enregistrement de la station
       if (data.type === "register") {
         const stationId = data.stationId;
-        connectedStations.set(ws, { stationId, ip: clientIP });
+        connectedStations.set(ws, { stationId, ip: clientIP }); // ajouter une station dans la map
         console.log(`Station enregistrée: ${stationId} (IP: ${clientIP})`);
 
         // Confirmer l'enregistrement à la station
@@ -36,7 +37,7 @@ wss.on('connection', (ws, req) => {
 
       // Alerte reçue d'une station
       else if (data.type === "alert") {
-        const stationInfo = connectedStations.get(ws);
+        const stationInfo = connectedStations.get(ws); // récupérer les infos des stations
         if (!stationInfo) {
           console.log(`Alerte d'une station inconnue (IP: ${clientIP}): ${data.alert}`);
           return;
@@ -46,7 +47,7 @@ wss.on('connection', (ws, req) => {
 
         // Diffuser l'alerte à toutes les autres stations connectées
         wss.clients.forEach(client => {
-          if (client !== ws && client.readyState === WebSocket.OPEN) {
+          if (client !== ws && client.readyState === WebSocket.OPEN) { //
             client.send(JSON.stringify({
               type: "alert",
               from: stationId,
