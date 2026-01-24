@@ -2,12 +2,12 @@
 #include <WebSocketsClient.h>
 
 // Configuration WiFi
-const char* ssid = "Votre_SSID_WiFi";  // Remplacez par votre SSID WiFi
-const char* password = "Votre_Mot_De_Passe";  // Remplacez par votre mot de passe WiFi
+const char* ssid = "Airtel_3031";  // Remplacez par votre SSID WiFi
+const char* password = "123456789000";  // Remplacez par votre mot de passe WiFi
 
 // Configuration WebSocket (version en ligne)
 WebSocketsClient webSocket;
-const char* serverHost = "votre-domaine.com";  // Remplacez par votre domaine ou IP publique
+const char* serverHost = "https://tfc-station-service-alerte.onrender.com";  // Remplacez par votre domaine ou IP publique
 const int serverPort = 443;  // Port 443 pour WSS (WebSocket sécurisé)
 
 // Identifiant unique de la station (changez pour chaque carte)
