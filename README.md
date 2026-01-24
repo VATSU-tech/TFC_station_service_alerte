@@ -33,11 +33,13 @@ ESP8266 → WiFi → Internet → Render (WSS) → Diffusion aux autres ESP8266
 ### ESP8266 (Arduino)
 
 #### Dépendances
+
 - **Bibliothèques Arduino** :
   - `ESP8266WiFi` (version 1.0) : Gestion WiFi.
   - `WebSockets` (version 2.7.2) : Client WebSocket avec support SSL.
 
 #### Configuration matérielle
+
 - **Broches** :
   - A0 : Entrée analogique capteur gaz.
   - GPIO 2 : LED d'alerte (active LOW).
@@ -45,6 +47,7 @@ ESP8266 → WiFi → Internet → Render (WSS) → Diffusion aux autres ESP8266
 - **Alimentation** : 3.3V/5V via USB ou batterie.
 
 #### Configuration logicielle
+
 ```cpp
 // WiFi
 const char* ssid = "YOUR_SSID";
@@ -60,6 +63,7 @@ String stationId = "Station_A";  // Unique par carte
 ```
 
 #### Logique principale
+
 - **Setup** : Connexion WiFi, initialisation WebSocket SSL avec fingerprint.
 - **Loop** :
   - Maintenance WebSocket.
@@ -68,6 +72,7 @@ String stationId = "Station_A";  // Unique par carte
   - Envoi alerte si enregistré et délai écoulé (15s).
 
 #### Gestion des événements WebSocket
+
 ```cpp
 void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
   switch (type) {
@@ -90,11 +95,13 @@ void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
 ### Serveur Node.js
 
 #### Dépendances
+
 - **express** : Framework web.
 - **ws** : Implémentation WebSocket.
 - **https/fs** : Support SSL (optionnel, géré par Render).
 
 #### Structure du code
+
 ```javascript
 const express = require('express');
 const WebSocket = require('ws');
@@ -130,6 +137,7 @@ app.get('/', (req, res) => res.send('Serveur WebSocket en ligne...'));
 ```
 
 #### Déploiement sur Render
+
 - **Service** : Web Service.
 - **Runtime** : Node.js.
 - **Build Command** : `npm install`.
@@ -140,10 +148,13 @@ app.get('/', (req, res) => res.send('Serveur WebSocket en ligne...'));
 ## Protocole de messages
 
 ### Format JSON
+
 Tous les messages sont des objets JSON stringifiés.
 
 #### Enregistrement de station
+
 **Client → Serveur**
+
 ```json
 {
   "type": "register",
@@ -152,6 +163,7 @@ Tous les messages sont des objets JSON stringifiés.
 ```
 
 **Serveur → Client**
+
 ```json
 {
   "type": "registered",
@@ -160,7 +172,9 @@ Tous les messages sont des objets JSON stringifiés.
 ```
 
 #### Alerte
+
 **Client → Serveur**
+
 ```json
 {
   "type": "alert",
@@ -170,6 +184,7 @@ Tous les messages sont des objets JSON stringifiés.
 ```
 
 **Serveur → Clients**
+
 ```json
 {
   "type": "alert",
@@ -187,12 +202,14 @@ Tous les messages sont des objets JSON stringifiés.
 ## Limitations et améliorations
 
 ### Limitations actuelles
+
 - Pas de persistance des données (alertes non stockées).
 - Pas d'authentification forte.
 - Détection gaz basique (seuil fixe).
 - Pas de gestion des conflits d'ID station.
 
 ### Améliorations possibles
+
 - **Base de données** : MongoDB/PostgreSQL pour logs d'alertes.
 - **Authentification** : JWT ou API keys.
 - **Monitoring** : Dashboard web avec Socket.IO.
@@ -203,11 +220,13 @@ Tous les messages sont des objets JSON stringifiés.
 ## Tests et débogage
 
 ### ESP8266
+
 - **Moniteur série** : Logs de connexion, envoi/réception.
 - **Simulation gaz** : Court-circuit A0 à 3.3V pour test.
 - **WiFi** : Vérifier stabilité réseau.
 
 ### Serveur
+
 - **Logs Render** : Console pour connexions/messages.
 - **Test local** : `node serverOnline.js` + client WebSocket (ex. wscat).
 - **Endpoint health** : GET / retourne status.

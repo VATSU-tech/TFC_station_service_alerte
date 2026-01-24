@@ -43,8 +43,8 @@ wss.on('connection', (ws, req) => {
         ws.send(JSON.stringify({ type: "registered", stationId }));
       }
 
-      // Alerte reçue d'une station
-      else if (data.type === "alert") {
+      
+      else if (data.type === "alert") { // Alerte reçue d'une station
         const stationInfo = connectedStations.get(ws);
         if (!stationInfo) {
           console.log(`Alerte d'une station inconnue (IP: ${clientIP}): ${data.alert}`);
@@ -53,8 +53,8 @@ wss.on('connection', (ws, req) => {
         const { stationId } = stationInfo;
         console.log(`Alerte de ${stationId}: ${data.alert}`);
 
-        // Diffuser l'alerte à toutes les autres stations connectées
-        wss.clients.forEach(client => {
+        
+        wss.clients.forEach(client => { // Diffuser l'alerte à toutes les autres stations connectées
           if (client !== ws && client.readyState === WebSocket.OPEN) {
             client.send(JSON.stringify({
               type: "alert",

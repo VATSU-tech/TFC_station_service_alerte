@@ -2,30 +2,25 @@
 #include <WebSocketsClient.h>
 
 // Configuration WiFi
-const char* ssid = "Airtel_3031";  // Remplacez par votre SSID WiFi
-const char* password = "123456789000";  // Remplacez par votre mot de passe WiFi
+const char* ssid = "Airtel_3031";
+const char* password = "123456789000";
 
-// Configuration WebSocket (version en ligne)
 WebSocketsClient webSocket;
-const char* serverHost = "tfc-station-service-alerte.onrender.com";  // Domaine sans https://
-const int serverPort = 443;  // Port 443 pour WSS (WebSocket sécurisé)
+const char* serverHost = "tfc-station-service-alerte.onrender.com";
+const int serverPort = 443;                                               // Port 443 pour WSS (WebSocket sécurisé)
 const uint8_t sslFingerprint[20] = {0xA8, 0xEE, 0x46, 0x11, 0x10, 0x0C, 0x0E, 0x7D, 0x4E, 0x9D, 0x25, 0xEB, 0x63, 0x50, 0x68, 0x30, 0x45, 0x91, 0x6B, 0x28};  // Fingerprint SHA1 en octets
  
-// Identifiant unique de la station (changez pour chaque carte)
 String stationId = "Station_A";
 
-// Pin pour la LED d'alerte
 #define LED_PIN 2
-#define BUZZER_PIN 4  // Ajoutez un buzzer si disponible
+#define BUZZER_PIN 4
 
-// État de connexion
 bool isRegistered = false;
 
 void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
   switch (type) {
     case WStype_CONNECTED: {
       Serial.println("Connecté au serveur WebSocket en ligne");
-      // Enregistrer la station
       String registerMsg = "{\"type\":\"register\",\"stationId\":\"" + stationId + "\"}";
       webSocket.sendTXT(registerMsg);
       Serial.println("Enregistrement envoyé: " + registerMsg);
@@ -33,7 +28,6 @@ void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
     }
 
     case WStype_TEXT: {
-      // Créer une String sécurisée à partir du payload
       char temp[length + 1];
       memcpy(temp, payload, length);
       temp[length] = '\0';
