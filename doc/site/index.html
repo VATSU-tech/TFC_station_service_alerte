@@ -25,7 +25,7 @@
     
     
       
-        <title>Système d'Alerte Intelligent pour Stations de Service TFC - doc station alerte</title>
+        <title>Système d'Alerte pour Stations de Service TFC - Documentation Développeur - doc station alerte</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systeme-dalerte-intelligent-pour-stations-de-service-tfc" class="md-skip">
+        <a href="#systeme-dalerte-pour-stations-de-service-tfc-documentation-developpeur" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Système d'Alerte Intelligent pour Stations de Service TFC
+              Système d'Alerte pour Stations de Service TFC - Documentation Développeur
             
           </span>
         </div>
@@ -279,10 +279,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bienvenue-dans-lavenir-de-la-securite-energetique" class="md-nav__link">
+  <a href="#vue-densemble" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bienvenue dans l'avenir de la sécurité énergétique
+        Vue d'ensemble
       
     </span>
   </a>
@@ -290,22 +290,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pourquoi-ce-projet-est-essentiel" class="md-nav__link">
+  <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pourquoi ce projet est essentiel ?
+        Architecture
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pourquoi ce projet est essentiel ?">
+    <nav class="md-nav" aria-label="Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#la-securite-dabord" class="md-nav__link">
+  <a href="#composants-principaux" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La sécurité d'abord
+        Composants principaux
       
     </span>
   </a>
@@ -313,21 +313,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prevention-des-catastrophes" class="md-nav__link">
+  <a href="#flux-de-donnees" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prévention des catastrophes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#avantages-economiques-et-environnementaux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Avantages économiques et environnementaux
+        Flux de données
       
     </span>
   </a>
@@ -340,22 +329,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ce-que-le-systeme-offre-deja" class="md-nav__link">
+  <a href="#configuration-et-deploiement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ce que le système offre déjà
+        Configuration et Déploiement
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ce que le système offre déjà">
+    <nav class="md-nav" aria-label="Configuration et Déploiement">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#surveillance-intelligente" class="md-nav__link">
+  <a href="#esp8266-arduino" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Surveillance intelligente
+        ESP8266 (Arduino)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ESP8266 (Arduino)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dépendances
       
     </span>
   </a>
@@ -363,10 +364,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alertes-instantanees" class="md-nav__link">
+  <a href="#configuration-materielle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Alertes instantanées
+        Configuration matérielle
       
     </span>
   </a>
@@ -374,10 +375,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#connectivite-mondiale" class="md-nav__link">
+  <a href="#configuration-logicielle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connectivité mondiale
+        Configuration logicielle
       
     </span>
   </a>
@@ -385,10 +386,182 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#facilite-dutilisation" class="md-nav__link">
+  <a href="#logique-principale" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Facilité d'utilisation
+        Logique principale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-evenements-websocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion des événements WebSocket
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serveur-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serveur Node.js
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serveur Node.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependances-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dépendances II
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-du-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure du code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploiement-sur-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déploiement sur Render
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocole-de-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocole de messages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protocole de messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format JSON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Format JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enregistrement-de-station" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enregistrement de station
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alerte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sécurité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-et-ameliorations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations et améliorations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations et améliorations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitations-actuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations actuelles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ameliorations-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Améliorations possibles
       
     </span>
   </a>
@@ -401,22 +574,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ameliorations-a-venir-vers-une-securite-totale" class="md-nav__link">
+  <a href="#tests-et-debogage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Améliorations à venir : Vers une sécurité totale
+        Tests et débogage
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Améliorations à venir : Vers une sécurité totale">
+    <nav class="md-nav" aria-label="Tests et débogage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#intelligence-artificielle-integree" class="md-nav__link">
+  <a href="#esp8266" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Intelligence artificielle intégrée
+        ESP8266
       
     </span>
   </a>
@@ -424,43 +597,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#interface-utilisateur-moderne" class="md-nav__link">
+  <a href="#serveur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interface utilisateur moderne
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#capteurs-avances" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Capteurs avancés
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#securite-renforcee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sécurité renforcée
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#evolutivite-et-personnalisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Évolutivité et personnalisation
+        Serveur
       
     </span>
   </a>
@@ -473,30 +613,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rejoignez-la-revolution-de-la-securite" class="md-nav__link">
+  <a href="#contribution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rejoignez la révolution de la sécurité
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Rejoignez la révolution de la sécurité">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pour-en-savoir-plus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pour en savoir plus
+        Contribution
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#licence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Licence
+      
+    </span>
+  </a>
   
 </li>
       
@@ -710,10 +844,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bienvenue-dans-lavenir-de-la-securite-energetique" class="md-nav__link">
+  <a href="#vue-densemble" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bienvenue dans l'avenir de la sécurité énergétique
+        Vue d'ensemble
       
     </span>
   </a>
@@ -721,22 +855,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pourquoi-ce-projet-est-essentiel" class="md-nav__link">
+  <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pourquoi ce projet est essentiel ?
+        Architecture
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pourquoi ce projet est essentiel ?">
+    <nav class="md-nav" aria-label="Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#la-securite-dabord" class="md-nav__link">
+  <a href="#composants-principaux" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La sécurité d'abord
+        Composants principaux
       
     </span>
   </a>
@@ -744,21 +878,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prevention-des-catastrophes" class="md-nav__link">
+  <a href="#flux-de-donnees" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prévention des catastrophes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#avantages-economiques-et-environnementaux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Avantages économiques et environnementaux
+        Flux de données
       
     </span>
   </a>
@@ -771,22 +894,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ce-que-le-systeme-offre-deja" class="md-nav__link">
+  <a href="#configuration-et-deploiement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ce que le système offre déjà
+        Configuration et Déploiement
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ce que le système offre déjà">
+    <nav class="md-nav" aria-label="Configuration et Déploiement">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#surveillance-intelligente" class="md-nav__link">
+  <a href="#esp8266-arduino" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Surveillance intelligente
+        ESP8266 (Arduino)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ESP8266 (Arduino)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dépendances
       
     </span>
   </a>
@@ -794,10 +929,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alertes-instantanees" class="md-nav__link">
+  <a href="#configuration-materielle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Alertes instantanées
+        Configuration matérielle
       
     </span>
   </a>
@@ -805,10 +940,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#connectivite-mondiale" class="md-nav__link">
+  <a href="#configuration-logicielle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connectivité mondiale
+        Configuration logicielle
       
     </span>
   </a>
@@ -816,10 +951,182 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#facilite-dutilisation" class="md-nav__link">
+  <a href="#logique-principale" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Facilité d'utilisation
+        Logique principale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-evenements-websocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion des événements WebSocket
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serveur-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serveur Node.js
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serveur Node.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependances-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dépendances II
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-du-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure du code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploiement-sur-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déploiement sur Render
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocole-de-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocole de messages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protocole de messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format JSON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Format JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enregistrement-de-station" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enregistrement de station
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alerte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sécurité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-et-ameliorations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations et améliorations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations et améliorations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitations-actuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations actuelles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ameliorations-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Améliorations possibles
       
     </span>
   </a>
@@ -832,22 +1139,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ameliorations-a-venir-vers-une-securite-totale" class="md-nav__link">
+  <a href="#tests-et-debogage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Améliorations à venir : Vers une sécurité totale
+        Tests et débogage
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Améliorations à venir : Vers une sécurité totale">
+    <nav class="md-nav" aria-label="Tests et débogage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#intelligence-artificielle-integree" class="md-nav__link">
+  <a href="#esp8266" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Intelligence artificielle intégrée
+        ESP8266
       
     </span>
   </a>
@@ -855,43 +1162,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#interface-utilisateur-moderne" class="md-nav__link">
+  <a href="#serveur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interface utilisateur moderne
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#capteurs-avances" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Capteurs avancés
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#securite-renforcee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sécurité renforcée
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#evolutivite-et-personnalisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Évolutivité et personnalisation
+        Serveur
       
     </span>
   </a>
@@ -904,30 +1178,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rejoignez-la-revolution-de-la-securite" class="md-nav__link">
+  <a href="#contribution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rejoignez la révolution de la sécurité
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Rejoignez la révolution de la sécurité">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pour-en-savoir-plus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pour en savoir plus
+        Contribution
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#licence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Licence
+      
+    </span>
+  </a>
   
 </li>
       
@@ -954,82 +1222,215 @@
                 
                   
 
-<h1 id="systeme-dalerte-intelligent-pour-stations-de-service-tfc">Système d'Alerte Intelligent pour Stations de Service TFC<a class="headerlink" href="#systeme-dalerte-intelligent-pour-stations-de-service-tfc" title="Permanent link">&para;</a></h1>
-<h2 id="bienvenue-dans-lavenir-de-la-securite-energetique">Bienvenue dans l'avenir de la sécurité énergétique<a class="headerlink" href="#bienvenue-dans-lavenir-de-la-securite-energetique" title="Permanent link">&para;</a></h2>
-<p>Imaginez un monde où les stations de service ne sont plus seulement des lieux de ravitaillement, mais des environnements ultra-sécurisés, capables de réagir instantanément aux dangers invisibles. Notre système d'alerte TFC transforme les stations traditionnelles en réseaux intelligents connectés, protégeant vies et biens 24h/24.</p>
-<h2 id="pourquoi-ce-projet-est-essentiel">Pourquoi ce projet est essentiel ?<a class="headerlink" href="#pourquoi-ce-projet-est-essentiel" title="Permanent link">&para;</a></h2>
-<h3 id="la-securite-dabord">La sécurité d'abord<a class="headerlink" href="#la-securite-dabord" title="Permanent link">&para;</a></h3>
-<p>Les stations de service manipulent des produits hautement inflammables. Une fuite de gaz ou une anomalie peut entraîner des explosions dévastatrices, comme on l'a vu dans de nombreux incidents mondiaux. Notre système détecte ces risques en temps réel et alerte immédiatement toutes les stations connectées, permettant une réponse rapide et coordonnée.</p>
-<h3 id="prevention-des-catastrophes">Prévention des catastrophes<a class="headerlink" href="#prevention-des-catastrophes" title="Permanent link">&para;</a></h3>
+<h1 id="systeme-dalerte-pour-stations-de-service-tfc-documentation-developpeur">Système d'Alerte pour Stations de Service TFC - Documentation Développeur<a class="headerlink" href="#systeme-dalerte-pour-stations-de-service-tfc-documentation-developpeur" title="Permanent link">&para;</a></h1>
+<h2 id="vue-densemble">Vue d'ensemble<a class="headerlink" href="#vue-densemble" title="Permanent link">&para;</a></h2>
+<p>Ce projet implémente un système distribué d'alerte pour stations de service TFC utilisant des microcontrôleurs ESP8266 pour la détection de gaz et un serveur WebSocket Node.js pour la communication en temps réel. Le système permet la détection locale d'anomalies gazeuses et la propagation d'alertes entre stations connectées via Internet.</p>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<h3 id="composants-principaux">Composants principaux<a class="headerlink" href="#composants-principaux" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Stations clientes (ESP8266)</strong> :</li>
+<li>Détection analogique de gaz via capteur MQ-135 ou similaire.</li>
+<li>Communication WebSocket sécurisée (WSS) avec le serveur central.</li>
+<li>
+<p>Interface utilisateur locale : LED et buzzer pour alertes visuelles/sonores.</p>
+</li>
+<li>
+<p><strong>Serveur central (Node.js + Express + WebSocket)</strong> :</p>
+</li>
+<li>Gestion des connexions WebSocket.</li>
+<li>Routage des messages d'alerte entre stations.</li>
+<li>
+<p>Hébergement sur Render (PaaS) avec SSL automatique.</p>
+</li>
+<li>
+<p><strong>Protocole de communication</strong> :</p>
+</li>
+<li>JSON over WebSocket pour tous les messages.</li>
+<li>Types de messages : <code>register</code>, <code>registered</code>, <code>alert</code>.</li>
+</ol>
+<h3 id="flux-de-donnees">Flux de données<a class="headerlink" href="#flux-de-donnees" title="Permanent link">&para;</a></h3>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ESP8266 → WiFi → Internet → Render (WSS) → Diffusion aux autres ESP8266
+</span></code></pre></div>
+<h2 id="configuration-et-deploiement">Configuration et Déploiement<a class="headerlink" href="#configuration-et-deploiement" title="Permanent link">&para;</a></h2>
+<h3 id="esp8266-arduino">ESP8266 (Arduino)<a class="headerlink" href="#esp8266-arduino" title="Permanent link">&para;</a></h3>
+<h4 id="dependances">Dépendances<a class="headerlink" href="#dependances" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Détection précoce</strong> : Identifie les problèmes avant qu'ils ne deviennent critiques.</li>
-<li><strong>Alerte collective</strong> : Une station en danger prévient les autres, créant un réseau de sécurité régional.</li>
-<li><strong>Réduction des pertes</strong> : Moins d'accidents = moins de dommages matériels et humains.</li>
+<li><strong>Bibliothèques Arduino</strong> :</li>
+<li><code>ESP8266WiFi</code> (version 1.0) : Gestion WiFi.</li>
+<li><code>WebSockets</code> (version 2.7.2) : Client WebSocket avec support SSL.</li>
 </ul>
-<h3 id="avantages-economiques-et-environnementaux">Avantages économiques et environnementaux<a class="headerlink" href="#avantages-economiques-et-environnementaux" title="Permanent link">&para;</a></h3>
+<h4 id="configuration-materielle">Configuration matérielle<a class="headerlink" href="#configuration-materielle" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Économies sur les assurances</strong> : Moins de sinistres grâce à la prévention.</li>
-<li><strong>Protection environnementale</strong> : Évite les déversements et pollutions accidentelles.</li>
-<li><strong>Fiabilité opérationnelle</strong> : Maintien du service même en cas d'incident isolé.</li>
+<li><strong>Broches</strong> :</li>
+<li>A0 : Entrée analogique capteur gaz.</li>
+<li>GPIO 2 : LED d'alerte (active LOW).</li>
+<li>GPIO 4 : Buzzer (active HIGH).</li>
+<li><strong>Alimentation</strong> : 3.3V/5V via USB ou batterie.</li>
 </ul>
-<h2 id="ce-que-le-systeme-offre-deja">Ce que le système offre déjà<a class="headerlink" href="#ce-que-le-systeme-offre-deja" title="Permanent link">&para;</a></h2>
-<h3 id="surveillance-intelligente">Surveillance intelligente<a class="headerlink" href="#surveillance-intelligente" title="Permanent link">&para;</a></h3>
-<p>Chaque station est équipée de capteurs discrets qui "respirent" l'air ambiant, détectant toute présence anormale de gaz ou vapeurs dangereuses.</p>
-<h3 id="alertes-instantanees">Alertes instantanées<a class="headerlink" href="#alertes-instantanees" title="Permanent link">&para;</a></h3>
-<p>Lorsqu'une anomalie est détectée :</p>
+<h4 id="configuration-logicielle">Configuration logicielle<a class="headerlink" href="#configuration-logicielle" title="Permanent link">&para;</a></h4>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// WiFi</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">ssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;YOUR_SSID&quot;</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">// Serveur</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">serverHost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;tfc-station-service-alerte.onrender.com&quot;</span><span class="p">;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">serverPort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">443</span><span class="p">;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">sslFingerprint</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0xA8</span><span class="p">,</span><span class="w"> </span><span class="mh">0xEE</span><span class="p">,</span><span class="w"> </span><span class="mh">0x46</span><span class="p">,</span><span class="w"> </span><span class="mh">0x11</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0C</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x7D</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x9D</span><span class="p">,</span><span class="w"> </span><span class="mh">0x25</span><span class="p">,</span><span class="w"> </span><span class="mh">0xEB</span><span class="p">,</span><span class="w"> </span><span class="mh">0x63</span><span class="p">,</span><span class="w"> </span><span class="mh">0x50</span><span class="p">,</span><span class="w"> </span><span class="mh">0x68</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="p">,</span><span class="w"> </span><span class="mh">0x45</span><span class="p">,</span><span class="w"> </span><span class="mh">0x91</span><span class="p">,</span><span class="w"> </span><span class="mh">0x6B</span><span class="p">,</span><span class="w"> </span><span class="mh">0x28</span><span class="p">};</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">// Station</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">String</span><span class="w"> </span><span class="n">stationId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Station_A&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// Unique par carte</span>
+</span></code></pre></div>
+<h4 id="logique-principale">Logique principale<a class="headerlink" href="#logique-principale" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Signal lumineux</strong> : Une LED s'allume pour attirer l'attention du personnel.</li>
-<li><strong>Alerte sonore</strong> : Un buzzer émet un signal audible.</li>
-<li><strong>Notification réseau</strong> : Toutes les autres stations du réseau sont automatiquement informées.</li>
+<li><strong>Setup</strong> : Connexion WiFi, initialisation WebSocket SSL avec fingerprint.</li>
+<li><strong>Loop</strong> :</li>
+<li>Maintenance WebSocket.</li>
+<li>Reconnexion automatique WiFi/WebSocket.</li>
+<li>Lecture capteur (seuil &gt; 50).</li>
+<li>Envoi alerte si enregistré et délai écoulé (15s).</li>
 </ul>
-<h3 id="connectivite-mondiale">Connectivité mondiale<a class="headerlink" href="#connectivite-mondiale" title="Permanent link">&para;</a></h3>
-<p>Grâce à Internet, les stations communiquent entre elles via un serveur sécurisé hébergé dans le cloud, assurant une couverture 24/7 sans interruption.</p>
-<h3 id="facilite-dutilisation">Facilité d'utilisation<a class="headerlink" href="#facilite-dutilisation" title="Permanent link">&para;</a></h3>
+<h4 id="gestion-des-evenements-websocket">Gestion des événements WebSocket<a class="headerlink" href="#gestion-des-evenements-websocket" title="Permanent link">&para;</a></h4>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">webSocketEvent</span><span class="p">(</span><span class="n">WStype_t</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">WStype_CONNECTED</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="c1">// Envoi inscription</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="n">webSocket</span><span class="p">.</span><span class="n">sendTXT</span><span class="p">(</span><span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">type</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">register</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">stationId</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">stationId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">}&quot;</span><span class="p">);</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">WStype_TEXT</span><span class="p">:</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="c1">// Parsing JSON et gestion alertes</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">indexOf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">type</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">registered</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="n">isRegistered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">indexOf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">type</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">alert</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="c1">// Activation LED/buzzer</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">      </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="serveur-nodejs">Serveur Node.js<a class="headerlink" href="#serveur-nodejs" title="Permanent link">&para;</a></h3>
+<h4 id="dependances-ii">Dépendances II<a class="headerlink" href="#dependances-ii" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Installation simple</strong> : Se branche comme un appareil électrique standard.</li>
-<li><strong>Maintenance minimale</strong> : Fonctionne automatiquement, sans intervention humaine quotidienne.</li>
-<li><strong>Évolutif</strong> : S'adapte à une station unique ou à un réseau entier.</li>
+<li><strong>express</strong> : Framework web.</li>
+<li><strong>ws</strong> : Implémentation WebSocket.</li>
+<li><strong>https/fs</strong> : Support SSL (optionnel, géré par Render).</li>
 </ul>
-<h2 id="ameliorations-a-venir-vers-une-securite-totale">Améliorations à venir : Vers une sécurité totale<a class="headerlink" href="#ameliorations-a-venir-vers-une-securite-totale" title="Permanent link">&para;</a></h2>
-<p>Nous travaillons constamment à enrichir le système pour répondre aux besoins futurs :</p>
-<h3 id="intelligence-artificielle-integree">Intelligence artificielle intégrée<a class="headerlink" href="#intelligence-artificielle-integree" title="Permanent link">&para;</a></h3>
+<h4 id="structure-du-code">Structure du code<a class="headerlink" href="#structure-du-code" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">WebSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ws&#39;</span><span class="p">);</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">express</span><span class="p">();</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">3000</span><span class="p">);</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">wss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">.</span><span class="nx">Server</span><span class="p">({</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="kd">let</span><span class="w"> </span><span class="nx">connectedStations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Map</span><span class="p">();</span><span class="w">  </span><span class="c1">// ws → {stationId, ip}</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nx">wss</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">ws</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="nx">ws</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;register&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="nx">connectedStations</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">ws</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">stationId</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">stationId</span><span class="p">,</span><span class="w"> </span><span class="nx">ip</span><span class="o">:</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">socket</span><span class="p">.</span><span class="nx">remoteAddress</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">      </span><span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;registered&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">stationId</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">stationId</span><span class="w"> </span><span class="p">}));</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;alert&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">      </span><span class="c1">// Diffusion à tous sauf émetteur</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">      </span><span class="nx">wss</span><span class="p">.</span><span class="nx">clients</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">client</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">client</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">ws</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">readyState</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">.</span><span class="nx">OPEN</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">          </span><span class="nx">client</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;alert&#39;</span><span class="p">,</span><span class="w"> </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">stationId</span><span class="p">,</span><span class="w"> </span><span class="nx">alert</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">alert</span><span class="w"> </span><span class="p">}));</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">      </span><span class="p">});</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">  </span><span class="nx">ws</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;close&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">    </span><span class="nx">connectedStations</span><span class="p">.</span><span class="ow">delete</span><span class="p">(</span><span class="nx">ws</span><span class="p">);</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="p">});</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;Serveur WebSocket en ligne...&#39;</span><span class="p">));</span>
+</span></code></pre></div>
+<h4 id="deploiement-sur-render">Déploiement sur Render<a class="headerlink" href="#deploiement-sur-render" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Prédiction des risques</strong> : Analyse des tendances pour anticiper les problèmes avant qu'ils n'apparaissent.</li>
-<li><strong>Apprentissage automatique</strong> : Le système s'améliore avec le temps, reconnaissant des patterns spécifiques à chaque station.</li>
+<li><strong>Service</strong> : Web Service.</li>
+<li><strong>Runtime</strong> : Node.js.</li>
+<li><strong>Build Command</strong> : <code>npm install</code>.</li>
+<li><strong>Start Command</strong> : <code>node serverOnline.js</code>.</li>
+<li><strong>Environment</strong> : PORT (auto-assigné par Render).</li>
+<li><strong>SSL</strong> : Automatique via Render (proxy HTTPS vers HTTP interne).</li>
 </ul>
-<h3 id="interface-utilisateur-moderne">Interface utilisateur moderne<a class="headerlink" href="#interface-utilisateur-moderne" title="Permanent link">&para;</a></h3>
+<h2 id="protocole-de-messages">Protocole de messages<a class="headerlink" href="#protocole-de-messages" title="Permanent link">&para;</a></h2>
+<h3 id="format-json">Format JSON<a class="headerlink" href="#format-json" title="Permanent link">&para;</a></h3>
+<p>Tous les messages sont des objets JSON stringifiés.</p>
+<h4 id="enregistrement-de-station">Enregistrement de station<a class="headerlink" href="#enregistrement-de-station" title="Permanent link">&para;</a></h4>
+<p><strong>Client → Serveur</strong></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;register&quot;</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;stationId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Station_A&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Serveur → Client</strong></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;registered&quot;</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">&quot;stationId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Station_A&quot;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="alerte">Alerte<a class="headerlink" href="#alerte" title="Permanent link">&para;</a></h4>
+<p><strong>Client → Serveur</strong></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alert&quot;</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nt">&quot;stationId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Station_A&quot;</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">&quot;alert&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gaz détecté&quot;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Serveur → Clients</strong></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alert&quot;</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">&quot;from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Station_A&quot;</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">&quot;alert&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gaz détecté&quot;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="securite">Sécurité<a class="headerlink" href="#securite" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Application mobile</strong> : Recevez les alertes directement sur votre smartphone, où que vous soyez.</li>
-<li><strong>Tableau de bord web</strong> : Visualisez l'état de toutes vos stations en temps réel via une interface intuitive.</li>
-<li><strong>Historique complet</strong> : Consultez les logs d'alertes passés pour analyse et optimisation.</li>
+<li><strong>SSL/TLS</strong> : Connexions WSS avec vérification fingerprint (ESP8266) et certificat (Render).</li>
+<li><strong>Authentification</strong> : Basée sur stationId (non crypté, améliorable avec tokens).</li>
+<li><strong>Pare-feu</strong> : Dépend de Render et du réseau local.</li>
 </ul>
-<h3 id="capteurs-avances">Capteurs avancés<a class="headerlink" href="#capteurs-avances" title="Permanent link">&para;</a></h3>
+<h2 id="limitations-et-ameliorations">Limitations et améliorations<a class="headerlink" href="#limitations-et-ameliorations" title="Permanent link">&para;</a></h2>
+<h3 id="limitations-actuelles">Limitations actuelles<a class="headerlink" href="#limitations-actuelles" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Multi-détection</strong> : Gaz, fumée, température, vibrations – une surveillance complète.</li>
-<li><strong>Calibration automatique</strong> : S'adapte aux conditions locales sans réglage manuel.</li>
-<li><strong>Intégration IoT</strong> : Connexion avec d'autres systèmes (caméras, alarmes incendie, etc.).</li>
+<li>Pas de persistance des données (alertes non stockées).</li>
+<li>Pas d'authentification forte.</li>
+<li>Détection gaz basique (seuil fixe).</li>
+<li>Pas de gestion des conflits d'ID station.</li>
 </ul>
-<h3 id="securite-renforcee">Sécurité renforcée<a class="headerlink" href="#securite-renforcee" title="Permanent link">&para;</a></h3>
+<h3 id="ameliorations-possibles">Améliorations possibles<a class="headerlink" href="#ameliorations-possibles" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Chiffrement de bout en bout</strong> : Vos données sont protégées contre toute interception.</li>
-<li><strong>Authentification forte</strong> : Accès sécurisé pour les utilisateurs autorisés uniquement.</li>
-<li><strong>Sauvegarde cloud</strong> : Toutes les données sont stockées en sécurité et accessibles à tout moment.</li>
+<li><strong>Base de données</strong> : MongoDB/PostgreSQL pour logs d'alertes.</li>
+<li><strong>Authentification</strong> : JWT ou API keys.</li>
+<li><strong>Monitoring</strong> : Dashboard web avec Socket.IO.</li>
+<li><strong>Capteurs avancés</strong> : Calibration automatique, multi-gaz.</li>
+<li><strong>Fiabilité</strong> : Retry logic, heartbeat WebSocket.</li>
+<li><strong>Scalabilité</strong> : Load balancing si &gt;100 stations.</li>
 </ul>
-<h3 id="evolutivite-et-personnalisation">Évolutivité et personnalisation<a class="headerlink" href="#evolutivite-et-personnalisation" title="Permanent link">&para;</a></h3>
+<h2 id="tests-et-debogage">Tests et débogage<a class="headerlink" href="#tests-et-debogage" title="Permanent link">&para;</a></h2>
+<h3 id="esp8266">ESP8266<a class="headerlink" href="#esp8266" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Modules modulaires</strong> : Ajoutez des fonctionnalités selon vos besoins (ex. : intégration avec les pompiers locaux).</li>
-<li><strong>Support multi-langues</strong> : Pour une adoption internationale.</li>
-<li><strong>API ouverte</strong> : Intégrez le système à vos outils existants.</li>
+<li><strong>Moniteur série</strong> : Logs de connexion, envoi/réception.</li>
+<li><strong>Simulation gaz</strong> : Court-circuit A0 à 3.3V pour test.</li>
+<li><strong>WiFi</strong> : Vérifier stabilité réseau.</li>
 </ul>
-<h2 id="rejoignez-la-revolution-de-la-securite">Rejoignez la révolution de la sécurité<a class="headerlink" href="#rejoignez-la-revolution-de-la-securite" title="Permanent link">&para;</a></h2>
-<p>Notre système d'alerte TFC n'est pas qu'un produit – c'est une vision d'un monde plus sûr. En adoptant cette technologie, vous protégez non seulement votre entreprise, mais contribuez à la sécurité collective de votre communauté.</p>
-<h3 id="pour-en-savoir-plus">Pour en savoir plus<a class="headerlink" href="#pour-en-savoir-plus" title="Permanent link">&para;</a></h3>
+<h3 id="serveur">Serveur<a class="headerlink" href="#serveur" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Démo</strong> : Contactez-nous pour une présentation personnalisée.</li>
-<li><strong>Installation</strong> : Notre équipe assure un déploiement sans stress.</li>
-<li><strong>Support</strong> : Assistance technique 24/7 pour une tranquillité d'esprit totale.</li>
+<li><strong>Logs Render</strong> : Console pour connexions/messages.</li>
+<li><strong>Test local</strong> : <code>node serverOnline.js</code> + client WebSocket (ex. wscat).</li>
+<li><strong>Endpoint health</strong> : GET / retourne status.</li>
 </ul>
-<p>Ensemble, créons un réseau énergétique plus sûr et plus fiable !</p>
+<h2 id="contribution">Contribution<a class="headerlink" href="#contribution" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fork le repo, branche feature, PR.</li>
+<li>Respecter style Arduino/Node.js standard.</li>
+<li>Tests unitaires pour logique serveur.</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>MIT - Libre utilisation/modification.</p>
 
 
 

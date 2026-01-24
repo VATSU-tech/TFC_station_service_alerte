@@ -27,7 +27,7 @@ Ce projet implémente un système distribué d'alerte pour stations de service T
 
 ### Flux de données
 
-```
+``` markdown
 ESP8266 → WiFi → Internet → Render (WSS) → Diffusion aux autres ESP8266
 ```
 
@@ -97,7 +97,7 @@ void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
 
 ### Serveur Node.js
 
-#### Dépendances
+#### Dépendances II
 
 - **express** : Framework web.
 - **ws** : Implémentation WebSocket.

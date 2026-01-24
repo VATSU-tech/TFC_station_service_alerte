@@ -29,7 +29,8 @@ Salut ! Si tu découvres la programmation aujourd'hui, ne t'inquiète pas. Ce pr
 
 ## Comment installer et utiliser ?
 
-### Pour la carte ESP8266 :
+### Pour la carte ESP8266
+
 1. **Matériel nécessaire** :
    - Une carte ESP8266 (comme NodeMCU).
    - Un capteur de gaz (connecté à la broche A0).
@@ -49,20 +50,23 @@ Salut ! Si tu découvres la programmation aujourd'hui, ne t'inquiète pas. Ce pr
    - La carte devrait se connecter au WiFi et au serveur.
    - Si tu touches le capteur (ou simules du gaz), elle enverra une alerte.
 
-### Pour le serveur :
+### Pour le serveur
+
 1. **Hébergement** : Le serveur est déjà sur Render (un service gratuit pour sites web). Il tourne automatiquement.
 2. **Si tu veux le changer** : Le code est dans `server/serverOnline.js`. Pour le tester localement :
    - Installe Node.js (gratuit).
    - Dans un terminal, va dans le dossier `server` et tape `npm install` puis `node serverOnline.js`.
-   - Le serveur tournera sur http://localhost:3000.
+   - Le serveur tournera sur <http://localhost:3000>.
 
 ## Que faire si ça ne marche pas ?
+
 - Vérifie que le WiFi est bon.
 - Regarde les messages dans le Moniteur Série : ils te disent ce qui se passe.
-- Assure-toi que le serveur Render est en ligne (va sur https://tfc-station-service-alerte.onrender.com pour voir "Serveur WebSocket en ligne...").
+- Assure-toi que le serveur Render est en ligne (va sur <https://tfc-station-service-alerte.onrender.com> pour voir "Serveur WebSocket en ligne...").
 - Si le fingerprint SSL change (rare), tu devras le mettre à jour (demande à un ami programmeur).
 
 ## Idées pour améliorer ?
+
 - Ajouter plus de capteurs (fumée, température).
 - Faire une app mobile pour voir les alertes.
 - Stocker les données dans une base de données.
