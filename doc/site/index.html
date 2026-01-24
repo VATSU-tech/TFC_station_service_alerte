@@ -1,0 +1,1132 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="ceci est un site pour la documentation d'un projet qui permet d'alerter les stations services d'une ville si l'une d'elle a des probleme">
+      
+      
+        <meta name="author" content="<VATSU-tech>">
+      
+      
+      
+      
+        <link rel="next" href="">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.18">
+    
+    
+      
+        <title>Système d'Alerte Intelligent pour Stations de Service TFC - doc station alerte</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="assets/stylesheets/modern/main.d4922b3c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#systeme-dalerte-intelligent-pour-stations-de-service-tfc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="" title="doc station alerte" class="md-header__button md-logo" aria-label="doc station alerte" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            doc station alerte
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Système d'Alerte Intelligent pour Stations de Service TFC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="" title="doc station alerte" class="md-nav__button md-logo" aria-label="doc station alerte" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    doc station alerte
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Système d'Alerte pour Stations de Service TFC - Documentation Développeur
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Système d'Alerte pour Stations de Service TFC - Documentation Développeur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bienvenue-dans-lavenir-de-la-securite-energetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bienvenue dans l'avenir de la sécurité énergétique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-ce-projet-est-essentiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pourquoi ce projet est essentiel ?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pourquoi ce projet est essentiel ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-securite-dabord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La sécurité d'abord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevention-des-catastrophes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prévention des catastrophes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantages-economiques-et-environnementaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avantages économiques et environnementaux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-que-le-systeme-offre-deja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce que le système offre déjà
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ce que le système offre déjà">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#surveillance-intelligente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surveillance intelligente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alertes-instantanees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alertes instantanées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivite-mondiale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connectivité mondiale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#facilite-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Facilité d'utilisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ameliorations-a-venir-vers-une-securite-totale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Améliorations à venir : Vers une sécurité totale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Améliorations à venir : Vers une sécurité totale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intelligence-artificielle-integree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intelligence artificielle intégrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface-utilisateur-moderne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface utilisateur moderne
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capteurs-avances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capteurs avancés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securite-renforcee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sécurité renforcée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolutivite-et-personnalisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Évolutivité et personnalisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rejoignez-la-revolution-de-la-securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rejoignez la révolution de la sécurité
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rejoignez la révolution de la sécurité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pour-en-savoir-plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour en savoir plus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Système d'Alerte Intelligent pour Stations de Service TFC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Documentation_Public/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 0 1 0 17.655V6.345a1.73 1.73 0 0 1 1.73-1.73h20.54A1.73 1.73 0 0 1 24 6.345v11.308a1.73 1.73 0 0 1-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Système d'Alerte Intelligent pour Stations de Service TFC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="README_Beginner/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.087 6.146c-.3 0-.607.017-.907.069-2.532.367-4.23 2.239-5.18 3.674-.95-1.435-2.648-3.307-5.18-3.674a6.5 6.5 0 0 0-.907-.069C2.648 6.146 0 8.77 0 12s2.656 5.854 5.913 5.854c.3 0 .607-.017.916-.069 2.531-.376 4.23-2.247 5.18-3.683.949 1.436 2.647 3.307 5.18 3.683.299.043.607.069.915.069C21.344 17.854 24 15.23 24 12s-2.656-5.854-5.913-5.854M6.53 15.734a4 4 0 0 1-.625.043c-2.148 0-3.889-1.7-3.889-3.777 0-2.085 1.749-3.777 3.898-3.777q.312.002.624.043c2.39.35 3.847 2.768 4.347 3.734-.508.974-1.974 3.384-4.355 3.734m11.558.043c-.208 0-.416-.017-.624-.043-2.39-.35-3.856-2.768-4.347-3.734.491-.966 1.957-3.384 4.347-3.734q.312-.041.624-.043c2.149 0 3.89 1.7 3.89 3.777 0 2.085-1.75 3.777-3.89 3.777m1.65-4.404v1.134h-1.205v1.182h-1.156v-1.182H16.17v-1.134h1.206V10.19h1.156v1.183zM4.246 12.498H7.82v-1.125H4.245v1.125z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Doc for beginer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="icons_preview/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.087 6.146c-.3 0-.607.017-.907.069-2.532.367-4.23 2.239-5.18 3.674-.95-1.435-2.648-3.307-5.18-3.674a6.5 6.5 0 0 0-.907-.069C2.648 6.146 0 8.77 0 12s2.656 5.854 5.913 5.854c.3 0 .607-.017.916-.069 2.531-.376 4.23-2.247 5.18-3.683.949 1.436 2.647 3.307 5.18 3.683.299.043.607.069.915.069C21.344 17.854 24 15.23 24 12s-2.656-5.854-5.913-5.854M6.53 15.734a4 4 0 0 1-.625.043c-2.148 0-3.889-1.7-3.889-3.777 0-2.085 1.749-3.777 3.898-3.777q.312.002.624.043c2.39.35 3.847 2.768 4.347 3.734-.508.974-1.974 3.384-4.355 3.734m11.558.043c-.208 0-.416-.017-.624-.043-2.39-.35-3.856-2.768-4.347-3.734.491-.966 1.957-3.384 4.347-3.734q.312-.041.624-.043c2.149 0 3.89 1.7 3.89 3.777 0 2.085-1.75 3.777-3.89 3.777m1.65-4.404v1.134h-1.205v1.182h-1.156v-1.182H16.17v-1.134h1.206V10.19h1.156v1.183zM4.246 12.498H7.82v-1.125H4.245v1.125z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Aperçu Visuel des Icônes dans MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index2/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 0 1 0 17.655V6.345a1.73 1.73 0 0 1 1.73-1.73h20.54A1.73 1.73 0 0 1 24 6.345v11.308a1.73 1.73 0 0 1-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Système d'Alerte Intelligent pour Stations de Service TFC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="markdown/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 0 1 0 17.655V6.345a1.73 1.73 0 0 1 1.73-1.73h20.54A1.73 1.73 0 0 1 24 6.345v11.308a1.73 1.73 0 0 1-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown in 5min
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bienvenue-dans-lavenir-de-la-securite-energetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bienvenue dans l'avenir de la sécurité énergétique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-ce-projet-est-essentiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pourquoi ce projet est essentiel ?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pourquoi ce projet est essentiel ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-securite-dabord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La sécurité d'abord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevention-des-catastrophes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prévention des catastrophes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantages-economiques-et-environnementaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avantages économiques et environnementaux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-que-le-systeme-offre-deja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce que le système offre déjà
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ce que le système offre déjà">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#surveillance-intelligente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surveillance intelligente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alertes-instantanees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alertes instantanées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivite-mondiale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connectivité mondiale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#facilite-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Facilité d'utilisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ameliorations-a-venir-vers-une-securite-totale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Améliorations à venir : Vers une sécurité totale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Améliorations à venir : Vers une sécurité totale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intelligence-artificielle-integree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intelligence artificielle intégrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface-utilisateur-moderne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface utilisateur moderne
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capteurs-avances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capteurs avancés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securite-renforcee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sécurité renforcée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolutivite-et-personnalisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Évolutivité et personnalisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rejoignez-la-revolution-de-la-securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rejoignez la révolution de la sécurité
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rejoignez la révolution de la sécurité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pour-en-savoir-plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour en savoir plus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="systeme-dalerte-intelligent-pour-stations-de-service-tfc">Système d'Alerte Intelligent pour Stations de Service TFC<a class="headerlink" href="#systeme-dalerte-intelligent-pour-stations-de-service-tfc" title="Permanent link">&para;</a></h1>
+<h2 id="bienvenue-dans-lavenir-de-la-securite-energetique">Bienvenue dans l'avenir de la sécurité énergétique<a class="headerlink" href="#bienvenue-dans-lavenir-de-la-securite-energetique" title="Permanent link">&para;</a></h2>
+<p>Imaginez un monde où les stations de service ne sont plus seulement des lieux de ravitaillement, mais des environnements ultra-sécurisés, capables de réagir instantanément aux dangers invisibles. Notre système d'alerte TFC transforme les stations traditionnelles en réseaux intelligents connectés, protégeant vies et biens 24h/24.</p>
+<h2 id="pourquoi-ce-projet-est-essentiel">Pourquoi ce projet est essentiel ?<a class="headerlink" href="#pourquoi-ce-projet-est-essentiel" title="Permanent link">&para;</a></h2>
+<h3 id="la-securite-dabord">La sécurité d'abord<a class="headerlink" href="#la-securite-dabord" title="Permanent link">&para;</a></h3>
+<p>Les stations de service manipulent des produits hautement inflammables. Une fuite de gaz ou une anomalie peut entraîner des explosions dévastatrices, comme on l'a vu dans de nombreux incidents mondiaux. Notre système détecte ces risques en temps réel et alerte immédiatement toutes les stations connectées, permettant une réponse rapide et coordonnée.</p>
+<h3 id="prevention-des-catastrophes">Prévention des catastrophes<a class="headerlink" href="#prevention-des-catastrophes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Détection précoce</strong> : Identifie les problèmes avant qu'ils ne deviennent critiques.</li>
+<li><strong>Alerte collective</strong> : Une station en danger prévient les autres, créant un réseau de sécurité régional.</li>
+<li><strong>Réduction des pertes</strong> : Moins d'accidents = moins de dommages matériels et humains.</li>
+</ul>
+<h3 id="avantages-economiques-et-environnementaux">Avantages économiques et environnementaux<a class="headerlink" href="#avantages-economiques-et-environnementaux" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Économies sur les assurances</strong> : Moins de sinistres grâce à la prévention.</li>
+<li><strong>Protection environnementale</strong> : Évite les déversements et pollutions accidentelles.</li>
+<li><strong>Fiabilité opérationnelle</strong> : Maintien du service même en cas d'incident isolé.</li>
+</ul>
+<h2 id="ce-que-le-systeme-offre-deja">Ce que le système offre déjà<a class="headerlink" href="#ce-que-le-systeme-offre-deja" title="Permanent link">&para;</a></h2>
+<h3 id="surveillance-intelligente">Surveillance intelligente<a class="headerlink" href="#surveillance-intelligente" title="Permanent link">&para;</a></h3>
+<p>Chaque station est équipée de capteurs discrets qui "respirent" l'air ambiant, détectant toute présence anormale de gaz ou vapeurs dangereuses.</p>
+<h3 id="alertes-instantanees">Alertes instantanées<a class="headerlink" href="#alertes-instantanees" title="Permanent link">&para;</a></h3>
+<p>Lorsqu'une anomalie est détectée :</p>
+<ul>
+<li><strong>Signal lumineux</strong> : Une LED s'allume pour attirer l'attention du personnel.</li>
+<li><strong>Alerte sonore</strong> : Un buzzer émet un signal audible.</li>
+<li><strong>Notification réseau</strong> : Toutes les autres stations du réseau sont automatiquement informées.</li>
+</ul>
+<h3 id="connectivite-mondiale">Connectivité mondiale<a class="headerlink" href="#connectivite-mondiale" title="Permanent link">&para;</a></h3>
+<p>Grâce à Internet, les stations communiquent entre elles via un serveur sécurisé hébergé dans le cloud, assurant une couverture 24/7 sans interruption.</p>
+<h3 id="facilite-dutilisation">Facilité d'utilisation<a class="headerlink" href="#facilite-dutilisation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Installation simple</strong> : Se branche comme un appareil électrique standard.</li>
+<li><strong>Maintenance minimale</strong> : Fonctionne automatiquement, sans intervention humaine quotidienne.</li>
+<li><strong>Évolutif</strong> : S'adapte à une station unique ou à un réseau entier.</li>
+</ul>
+<h2 id="ameliorations-a-venir-vers-une-securite-totale">Améliorations à venir : Vers une sécurité totale<a class="headerlink" href="#ameliorations-a-venir-vers-une-securite-totale" title="Permanent link">&para;</a></h2>
+<p>Nous travaillons constamment à enrichir le système pour répondre aux besoins futurs :</p>
+<h3 id="intelligence-artificielle-integree">Intelligence artificielle intégrée<a class="headerlink" href="#intelligence-artificielle-integree" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Prédiction des risques</strong> : Analyse des tendances pour anticiper les problèmes avant qu'ils n'apparaissent.</li>
+<li><strong>Apprentissage automatique</strong> : Le système s'améliore avec le temps, reconnaissant des patterns spécifiques à chaque station.</li>
+</ul>
+<h3 id="interface-utilisateur-moderne">Interface utilisateur moderne<a class="headerlink" href="#interface-utilisateur-moderne" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Application mobile</strong> : Recevez les alertes directement sur votre smartphone, où que vous soyez.</li>
+<li><strong>Tableau de bord web</strong> : Visualisez l'état de toutes vos stations en temps réel via une interface intuitive.</li>
+<li><strong>Historique complet</strong> : Consultez les logs d'alertes passés pour analyse et optimisation.</li>
+</ul>
+<h3 id="capteurs-avances">Capteurs avancés<a class="headerlink" href="#capteurs-avances" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Multi-détection</strong> : Gaz, fumée, température, vibrations – une surveillance complète.</li>
+<li><strong>Calibration automatique</strong> : S'adapte aux conditions locales sans réglage manuel.</li>
+<li><strong>Intégration IoT</strong> : Connexion avec d'autres systèmes (caméras, alarmes incendie, etc.).</li>
+</ul>
+<h3 id="securite-renforcee">Sécurité renforcée<a class="headerlink" href="#securite-renforcee" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Chiffrement de bout en bout</strong> : Vos données sont protégées contre toute interception.</li>
+<li><strong>Authentification forte</strong> : Accès sécurisé pour les utilisateurs autorisés uniquement.</li>
+<li><strong>Sauvegarde cloud</strong> : Toutes les données sont stockées en sécurité et accessibles à tout moment.</li>
+</ul>
+<h3 id="evolutivite-et-personnalisation">Évolutivité et personnalisation<a class="headerlink" href="#evolutivite-et-personnalisation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Modules modulaires</strong> : Ajoutez des fonctionnalités selon vos besoins (ex. : intégration avec les pompiers locaux).</li>
+<li><strong>Support multi-langues</strong> : Pour une adoption internationale.</li>
+<li><strong>API ouverte</strong> : Intégrez le système à vos outils existants.</li>
+</ul>
+<h2 id="rejoignez-la-revolution-de-la-securite">Rejoignez la révolution de la sécurité<a class="headerlink" href="#rejoignez-la-revolution-de-la-securite" title="Permanent link">&para;</a></h2>
+<p>Notre système d'alerte TFC n'est pas qu'un produit – c'est une vision d'un monde plus sûr. En adoptant cette technologie, vous protégez non seulement votre entreprise, mais contribuez à la sécurité collective de votre communauté.</p>
+<h3 id="pour-en-savoir-plus">Pour en savoir plus<a class="headerlink" href="#pour-en-savoir-plus" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Démo</strong> : Contactez-nous pour une présentation personnalisée.</li>
+<li><strong>Installation</strong> : Notre équipe assure un déploiement sans stress.</li>
+<li><strong>Support</strong> : Assistance technique 24/7 pour une tranquillité d'esprit totale.</li>
+</ul>
+<p>Ensemble, créons un réseau énergétique plus sûr et plus fiable !</p>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="" class="md-footer__link md-footer__link--next" aria-label="Next: Système d&#x27;Alerte Intelligent pour Stations de Service TFC">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Système d'Alerte Intelligent pour Stations de Service TFC
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"search":"assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8ffeb9c9.min.js"></script>
+      
+    
+  </body>
+</html>

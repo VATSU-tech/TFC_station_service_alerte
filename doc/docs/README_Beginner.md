@@ -1,4 +1,8 @@
-# Système d'Alerte pour Stations de Service TFC - Guide pour Débutants
+---
+icon: simple/arduino
+---
+
+# Doc for beginer
 
 Salut ! Si tu découvres la programmation aujourd'hui, ne t'inquiète pas. Ce projet est comme un système d'alarme intelligent pour des stations de service. Imagine des boîtes magiques (appelées "cartes ESP8266") qui surveillent l'air pour détecter du gaz dangereux. Si elles en trouvent, elles envoient un message à un ordinateur distant (le serveur) qui prévient toutes les autres boîtes.
 
