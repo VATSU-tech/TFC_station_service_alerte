@@ -7,9 +7,10 @@ const char* password = "123456789000";  // Remplacez par votre mot de passe WiFi
 
 // Configuration WebSocket (version en ligne)
 WebSocketsClient webSocket;
-const char* serverHost = "https://tfc-station-service-alerte.onrender.com";  // Remplacez par votre domaine ou IP publique
+const char* serverHost = "tfc-station-service-alerte.onrender.com";  // Domaine sans https://
 const int serverPort = 443;  // Port 443 pour WSS (WebSocket sécurisé)
-
+const uint8_t sslFingerprint[20] = {0xA8, 0xEE, 0x46, 0x11, 0x10, 0x0C, 0x0E, 0x7D, 0x4E, 0x9D, 0x25, 0xEB, 0x63, 0x50, 0x68, 0x30, 0x45, 0x91, 0x6B, 0x28};  // Fingerprint SHA1 en octets
+ 
 // Identifiant unique de la station (changez pour chaque carte)
 String stationId = "Station_A";
 
@@ -87,7 +88,7 @@ void setup() {
   Serial.println(" WiFi connecté ! IP: " + WiFi.localIP().toString());
 
   // Connexion WebSocket sécurisée (WSS)
-  webSocket.beginSSL(serverHost, serverPort, "/");
+  webSocket.beginSSL(serverHost, serverPort, "/", sslFingerprint);
   webSocket.onEvent(webSocketEvent);
   webSocket.setReconnectInterval(5000);  // Reconnexion automatique
 }
@@ -108,7 +109,7 @@ void loop() {
   // Vérifier et reconnecter WebSocket si nécessaire
   if (!webSocket.isConnected() && isRegistered) {
     Serial.println("WebSocket déconnecté, reconnexion...");
-    webSocket.beginSSL(serverHost, serverPort, "/");
+    webSocket.beginSSL(serverHost, serverPort, "/", sslFingerprint);
   }
 
   // Détection de gaz et envoi d'alerte (toutes les 15 secondes si détecté)
