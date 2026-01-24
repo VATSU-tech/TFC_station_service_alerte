@@ -44,25 +44,25 @@ wss.on('connection', (ws, req) => {
       }
 
       
-      else if (data.type === "alert") { // Alerte reçue d'une station
-        const stationInfo = connectedStations.get(ws);
-        if (!stationInfo) {
+      else if (data.type === "alert") {                        // Alerte reçue d'une station
+        const stationInfo = connectedStations.get(ws); 
+        if (!stationInfo) { 
           console.log(`Alerte d'une station inconnue (IP: ${clientIP}): ${data.alert}`);
           return;
         }
-        const { stationId } = stationInfo;
+        const { stationId } = stationInfo; 
         console.log(`Alerte de ${stationId}: ${data.alert}`);
 
         
-        wss.clients.forEach(client => { // Diffuser l'alerte à toutes les autres stations connectées
+        wss.clients.forEach(client => {                         // Diffuser l'alerte à toutes les autres stations connectées
           if (client !== ws && client.readyState === WebSocket.OPEN) {
             client.send(JSON.stringify({
-              type: "alert",
-              from: stationId,
+              type: "alert", 
+              from: stationId, 
               alert: data.alert
-            }));
+            })); 
           }
-        });
+        }); 
       }
     } catch (err) {
       console.error(`Erreur de parsing du message depuis ${clientIP}:`, err);

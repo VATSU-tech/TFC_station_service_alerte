@@ -8,29 +8,29 @@ const char* password = "123456789000";
 WebSocketsClient webSocket;
 const char* serverHost = "tfc-station-service-alerte.onrender.com";
 const int serverPort = 443;                                               // Port 443 pour WSS (WebSocket sécurisé)
-const uint8_t sslFingerprint[20] = {0xA8, 0xEE, 0x46, 0x11, 0x10, 0x0C, 0x0E, 0x7D, 0x4E, 0x9D, 0x25, 0xEB, 0x63, 0x50, 0x68, 0x30, 0x45, 0x91, 0x6B, 0x28};  // Fingerprint SHA1 en octets
+const uint8_t sslFingerprint[20] = {0xA8,0xEE, 0x46, 0x11, 0x10, 0x0C, 0x0E, 0x7D, 0x4E, 0x9D, 0x25, 0xEB, 0x63, 0x50, 0x68, 0x30, 0x45, 0x91, 0x6B, 0x28};  // Fingerprint SHA1 en octets
  
-String stationId = "Station_A";
+String stationId = "Station_A"; 
 
-#define LED_PIN 2
-#define BUZZER_PIN 4
+#define LED_PIN LED_BUILTIN
+#define BUZZER_PIN D0
 
 bool isRegistered = false;
 
 void webSocketEvent(WStype_t type, uint8_t* payload, size_t length) {
   switch (type) {
-    case WStype_CONNECTED: {
-      Serial.println("Connecté au serveur WebSocket en ligne");
-      String registerMsg = "{\"type\":\"register\",\"stationId\":\"" + stationId + "\"}";
-      webSocket.sendTXT(registerMsg);
+    case WStype_CONNECTED: { 
+      Serial.println("Connecté au serveur WebSocket en ligne"); 
+      String registerMsg = "{\"type\":\"register\",\"stationId\":\"" + stationId + "\"}"; 
+      webSocket.sendTXT(registerMsg); 
       Serial.println("Enregistrement envoyé: " + registerMsg);
-      break;
+      break; 
     }
 
-    case WStype_TEXT: {
-      char temp[length + 1];
-      memcpy(temp, payload, length);
-      temp[length] = '\0';
+    case WStype_TEXT: { 
+      char temp[length + 1]; 
+      memcpy(temp, payload, length); 
+      temp[length] = '\0'; 
       String message = temp;
 
       Serial.println("Message reçu: " + message);
